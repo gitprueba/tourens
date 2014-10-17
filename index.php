@@ -8,7 +8,22 @@
 Usuario <input type="text" name="user" required><br>
 Password <input type="password" name="pass" required><br>
 <input type="submit" value="Enviar">
-</form>
+</form><br>
+
+
+
+<?php 
+
+	session_start();
+	
+	if(isset($_SESSION['ses'])){
+		
+		$nombre = $_REQUEST['user'];
+		echo 'Bienvenido '."<br>";
+		echo '<a href="logout.php">Logout</a>';
+	}
+
+?>
 
 
 </body>
